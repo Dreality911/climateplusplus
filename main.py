@@ -1,0 +1,16 @@
+rcp = None              # representative concentration pathway
+ggc = None              # Treibhausgaskonzentration
+# temp = None           # Temperatur
+snowCover = None        # Eisfläche
+avgPrec = None          # Niederschlag
+gsStrenght = None       # Golfstromstärke
+climInv = None          # Klimainvestitionen
+glacMelt = None         # Gletscherschmelze
+seaLevel = None         # Meeresspiegel
+# oceanHeat = None      # Ozeanwärmegehalt
+# forestLoss = None     # Waldverlust
+forestArea = None       # Waldfläche
+winterLength = None     # Winterlänge
+permafrost = None       # Permafrost
+bioflora = None         # Biologische Vielfalt
+# cropYield = None      # Ernteertrag
