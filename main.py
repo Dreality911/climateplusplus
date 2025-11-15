@@ -1,6 +1,6 @@
 ## Imports
 import keyboard
-
+import time
 
 ## Climate Data Variables
 ## Commented lines are optional and can be included if data is available and when the programm is more advanced.    
@@ -13,15 +13,16 @@ globalTemp = None           # globale Temperatur (°C)                          
 # gsStrenght = None           # Golfstromstärke (Sv)                                  Link:
 # climInv = None             # Klimainvestitionen (Mrd. USD/Jahr)                    Link:
 # glacMelt = None             # Gletscherschmelze (t)                                 Link: 
-# seaLevel = None             # Meeresspiegel (m)                                     Link: https://www.umweltbundesamt.de/monitoring-zur-das/handlungsfelder/kuesten-meeresschutz/km-i-2/indikator
+seaLevel = None             # Meeresspiegel (m)                                     Link: https://www.umweltbundesamt.de/monitoring-zur-das/handlungsfelder/kuesten-meeresschutz/km-i-2/indikator
 # oceanHeat = None          # Ozeanwärmegehalt  (Joule)                             Link:
 # forestLoss = None         # Waldverlust   (km²/Jahr)                              Link:
-forestArea = None           # Waldfläche (km²)                                      Link: https://www.fao.org/3/i4793e/i4793e.pdf
+# forestArea = None           # Waldfläche (km²)                                      Link: https://www.fao.org/3/i4793e/i4793e.pdf
 # winterLength = None         # Winterlänge (Tage)                                    Link:              
 # permafrostDepth = None      # Permafrost-Tiefe (m)                                  Link:     
 # energyMix = None            # Energie-Mix (% Erneuerbare Energien)                  Link:
 
 
+## Main Program
 
 print("CLIMATE++\n \n \n Wählen Sie eine Option aus indem sie die zugehörige Nummer eingeben: \n 1. Simulation starten\n 2. Programm verlassen")
 user_input = input()
@@ -32,14 +33,19 @@ if(user_input == "1"):
     ggc = float(input())
     print("Geben sie die Anfangs-globale Temperatur (in °C): ")
     globalTemp = float(input())
-    print("Geben sie die Anfangs-Waldfläche (in km²): ")
-    forestArea = float(input())
-    print("\n\nSimulation hat mit den folgenden Parameterm gestartet: \n Treibhausgaskonzentration: " + str(ggc) + " ppm CO2-Äquivalent \n globale Temperatur: " + str(globalTemp) + " °C \n Waldfläche: " + str(forestArea) + " km²")
+    print("Geben sie den Anfangs-Meeresspiegel (in m ueber Normal Null): ")
+    seaLevel = float(input())
+    print("\n\nSimulation hat mit den folgenden Parameterm gestartet: \n Treibhausgaskonzentration: " + str(ggc) + " ppm CO2-Äquivalent \n globale Temperatur: " + str(globalTemp) + " °C \n Wasserpegel: " + str(seaLevel) + " m ueber Normal Null")
     print("\n\n--- SIMULATION LAEUFT ---\n\n")
     print("Um das Programm zu verlassen, drücken sie Escape. Einige der folgenden Ereignisse werden von ihnen verlangen mit dem Programm zu interagieren.")
     while not keyboard.is_pressed('esc'):
         # Hier ist unser kompletter Simulationscode
-        print("Simulation läuft...")     
+
+        # Funktion die Ereignisse und Parameter abfragt und damit möglicherweise Ereignisse auslöst
+        
+        print("In dieser Iteration ist noch nichts passiert.") 
+        time.sleep(0.1)
         pass
+    print("Simulation beendet.")
 elif(user_input == "2"):
     print("Verlasse Programm...")
