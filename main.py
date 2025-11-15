@@ -1,3 +1,7 @@
+## Imports
+import keyboard
+
+
 ## Climate Data Variables
 ## Commented lines are optional and can be included if data is available and when the programm is more advanced.    
 
